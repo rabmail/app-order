@@ -18,36 +18,36 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class CallbackTest {
-    private WebDriver driver;
+//    private WebDriver driver;
+//
+//    @BeforeAll
+//    static void setUpAll() {
+//        System.setProperty("webdriver.chrome.driver", "C:\\Git\\chromedriver.exe");
+//    }
+//
+//    @BeforeEach
+//    void setUp() {
+//        driver = new ChromeDriver();
+//    }
+//
+//    @AfterEach
+//    void tearDown() {
+//        driver.quit();
+//        driver = null;
+//    }
 
-    @BeforeAll
-    static void setUpAll() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Git\\chromedriver.exe");
-    }
-
-    @BeforeEach
-    void setUp() {
-        driver = new ChromeDriver();
-    }
-
-    @AfterEach
-    void tearDown() {
-        driver.quit();
-        driver = null;
-    }
-
-    @Test
-    void shouldTestSomething() {
-        driver.get("http://localhost:9999");
-        List<WebElement> elements = driver.findElements(By.className("input__control"));
-        elements.get(0).sendKeys("Василий Пупкин");
-        elements.get(1).sendKeys("+79102280000");
-        driver.findElement(By.className("checkbox__box")).click();
-        driver.findElement(By.className("button")).click();
-        String text = driver.findElement(By.className("Success_successBlock__2L3Cw")).getText();
-
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
-    }
+//    @Test
+//    void shouldTestSomething() {
+//        driver.get("http://localhost:9999");
+//        List<WebElement> elements = driver.findElements(By.className("input__control"));
+//        elements.get(0).sendKeys("Василий Пупкин");
+//        elements.get(1).sendKeys("+79102280000");
+//        driver.findElement(By.className("checkbox__box")).click();
+//        driver.findElement(By.className("button")).click();
+//        String text = driver.findElement(By.className("Success_successBlock__2L3Cw")).getText();
+//
+//        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
+//    }
 
     @Test
     void shouldTestRequest() {
