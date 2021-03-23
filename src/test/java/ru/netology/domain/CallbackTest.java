@@ -41,7 +41,7 @@ public class CallbackTest {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Василий Пупкин");
-        elements.get(1).sendKeys("+79102280065");
+        elements.get(1).sendKeys("+79102280000");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button")).click();
         String text = driver.findElement(By.className("Success_successBlock__2L3Cw")).getText();
@@ -52,8 +52,8 @@ public class CallbackTest {
     @Test
     void shouldTestRequest() {
         open("http://localhost:9999");
-        $("[data-test-id=name] input").setValue("Татьяна");
-        $("[data-test-id=phone] input").setValue("+79270000000");
+        $("[data-test-id=name] input").setValue("Василий Пупкин");
+        $("[data-test-id=phone] input").setValue("+79102280000");
         $("[data-test-id=agreement]").click();
         $("button").click();
         $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
